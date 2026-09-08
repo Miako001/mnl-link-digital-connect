@@ -4,7 +4,7 @@ import { brand } from "@/lib/site-content";
 
 const links = [
   { href: "#services", label: "Services" },
-  { href: "#work", label: "Work" },
+  
   { href: "#about", label: "About" },
   { href: "#contact", label: "Contact" },
 ];

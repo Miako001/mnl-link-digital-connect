@@ -3,7 +3,7 @@ import { ArrowRight, Instagram, Mail, MapPin, Phone, ScanLine } from "lucide-rea
 import { SiteNav } from "@/components/site/SiteNav";
 import { QrMotif } from "@/components/site/QrMotif";
 import { Reveal } from "@/components/site/Reveal";
-import { brand, contact, founders, projects, services, values, why } from "@/lib/site-content";
+import { brand, contact, founders, services, values, why } from "@/lib/site-content";
 
 const title = "M&L Link | Digital Solutions for Growing Businesses";
 const description =
@@ -47,7 +47,6 @@ function Index() {
         <Hero />
         <Intro />
         <Services />
-        <Work />
         <Founders />
         <Why />
         <Contact />
@@ -98,12 +97,6 @@ function Hero() {
               className="inline-flex items-center justify-center gap-2 rounded-full bg-deco px-7 py-3.5 text-sm font-medium text-navy transition-colors hover:bg-background"
             >
               Explore our services <ArrowRight className="h-4 w-4" />
-            </a>
-            <a
-              href="#work"
-              className="inline-flex items-center justify-center rounded-full border border-background/30 px-7 py-3.5 text-sm font-medium text-background transition-colors hover:border-deco hover:text-deco"
-            >
-              View our work
             </a>
           </div>
           <p
@@ -203,47 +196,6 @@ function Services() {
   );
 }
 
-function Work() {
-  return (
-    <section id="work" className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">
-      <SectionHead eyebrow="Selected work" heading="Selected work." sub="A look at what we're building." />
-      <div className="mt-16 space-y-20">
-        {projects.map((p, i) => (
-          <Reveal key={p.title} delay={i * 80}>
-            <article className="group grid gap-8 md:grid-cols-[1.3fr_1fr] md:items-center md:gap-14">
-              <div className="overflow-hidden border border-hairline bg-secondary">
-                {p.image ? (
-                  <img
-                    src={p.image}
-                    alt={`${p.title} preview`}
-                    loading="lazy"
-                    className="aspect-[16/10] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-                  />
-                ) : (
-                  <div className="dot-grid grid aspect-[16/10] w-full place-items-center transition-transform duration-700 group-hover:scale-[1.03]">
-                    <span className="eyebrow bg-background px-3 py-1 text-muted-foreground">
-                      Project image
-                    </span>
-                  </div>
-                )}
-              </div>
-              <div className={i % 2 === 1 ? "md:order-first" : ""}>
-                <p className="eyebrow text-muted-foreground">{p.meta}</p>
-                <h3 className="mt-4 font-display text-2xl font-bold text-navy sm:text-3xl">
-                  {p.title}
-                </h3>
-                <p className="mt-4 text-base leading-relaxed text-muted-foreground">{p.body}</p>
-                <span className="mt-6 inline-flex items-center gap-2 border-b border-deco pb-1 text-sm font-medium text-navy transition-all group-hover:gap-3">
-                  View project <ArrowRight className="h-4 w-4" />
-                </span>
-              </div>
-            </article>
-          </Reveal>
-        ))}
-      </div>
-    </section>
-  );
-}
 
 function Founders() {
   return (
