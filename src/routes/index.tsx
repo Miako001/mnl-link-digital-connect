@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, Instagram, Mail, MapPin, Phone, ScanLine } from "lucide-react";
+import { ArrowRight, Mail, MapPin, Phone, ScanLine } from "lucide-react";
 import { SiteNav } from "@/components/site/SiteNav";
 import { QrMotif } from "@/components/site/QrMotif";
 import { Reveal } from "@/components/site/Reveal";
@@ -267,20 +267,15 @@ function Contact() {
         >
           Start a conversation <ArrowRight className="h-4 w-4" />
         </a>
-        <dl className="mt-16 grid gap-8 border-t border-background/15 pt-10 sm:grid-cols-2 lg:grid-cols-4">
+        <dl className="mt-16 grid gap-8 border-t border-background/15 pt-10 sm:grid-cols-2 lg:grid-cols-3">
           <ContactItem icon={<Mail className="h-4 w-4" />} label="Email">
             <a href={`mailto:${contact.email}`} className="hover:text-deco">
               {contact.email}
             </a>
           </ContactItem>
           <ContactItem icon={<Phone className="h-4 w-4" />} label="Phone">
-            <a href={`tel:${contact.phone.replace(/\s/g, "")}`} className="hover:text-deco">
+            <a href={`tel:${contact.phone.replace(/[\s/]/g, "")}`} className="hover:text-deco">
               {contact.phone}
-            </a>
-          </ContactItem>
-          <ContactItem icon={<Instagram className="h-4 w-4" />} label="Instagram">
-            <a href={contact.instagramUrl} className="hover:text-deco">
-              {contact.instagram}
             </a>
           </ContactItem>
           <ContactItem icon={<MapPin className="h-4 w-4" />} label="Location">
@@ -325,13 +320,10 @@ function Footer() {
             </div>
           </div>
           <nav aria-label="Footer" className="flex flex-wrap gap-6 text-sm">
-            <a href={contact.instagramUrl} className="hover:text-deco">
-              Instagram
-            </a>
             <a href={`mailto:${contact.email}`} className="hover:text-deco">
               Email
             </a>
-            <a href={`tel:${contact.phone.replace(/\s/g, "")}`} className="hover:text-deco">
+            <a href={`tel:${contact.phone.replace(/[\s/]/g, "")}`} className="hover:text-deco">
               Phone
             </a>
           </nav>
