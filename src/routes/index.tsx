@@ -68,7 +68,7 @@ function Hero() {
           <img
             src={brand.logoUrl}
             alt="M&L Link logo"
-            className="mb-10 h-14 w-14 animate-fade-in object-contain"
+            className="mb-10 h-14 w-14 animate-fade-in rounded-md bg-background object-contain p-1"
           />
           <p
             className="eyebrow animate-fade-in text-deco"
@@ -366,7 +366,7 @@ function Footer() {
       <div className="mx-auto max-w-6xl border-t border-background/15 px-5 py-12 md:px-8">
         <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
           <div className="flex min-w-0 items-start gap-3">
-            <img src={brand.logoUrl} alt="" className="h-9 w-9 shrink-0 object-contain" />
+            <img src={brand.logoUrl} alt="" className="h-9 w-9 shrink-0 rounded-md bg-background object-contain p-0.5" />
             <div className="min-w-0">
               <p className="font-display text-lg font-bold text-background">{brand.name}</p>
               <p className="mt-1 text-sm">{brand.supporting}</p>
