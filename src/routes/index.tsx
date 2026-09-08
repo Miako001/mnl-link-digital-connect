@@ -32,7 +32,7 @@ export const Route = createFileRoute("/")({
           description,
           address: { "@type": "PostalAddress", addressLocality: "Nairobi", addressCountry: "KE" },
           email: contact.email,
-          telephone: contact.phone,
+          telephone: contact.phones.join(", "),
         }),
       },
     ],
@@ -262,7 +262,7 @@ function Contact() {
           Tell us what you're trying to solve. Let's build something that works for your business.
         </p>
         <a
-          href={`mailto:${contact.email}`}
+          href="tel:0746558266"
           className="mt-10 inline-flex items-center gap-2 rounded-full bg-deco px-8 py-4 text-sm font-medium text-navy transition-colors hover:bg-background"
         >
           Start a conversation <ArrowRight className="h-4 w-4" />
@@ -274,9 +274,13 @@ function Contact() {
             </a>
           </ContactItem>
           <ContactItem icon={<Phone className="h-4 w-4" />} label="Phone">
-            <a href={`tel:${contact.phone.replace(/[\s/]/g, "")}`} className="hover:text-deco">
-              {contact.phone}
-            </a>
+            <div className="flex flex-col gap-1">
+              {contact.phones.map((phone) => (
+                <a key={phone} href={`tel:${phone.replace(/\s/g, "")}`} className="hover:text-deco">
+                  {phone}
+                </a>
+              ))}
+            </div>
           </ContactItem>
           <ContactItem icon={<MapPin className="h-4 w-4" />} label="Location">
             {contact.location}
@@ -323,7 +327,7 @@ function Footer() {
             <a href={`mailto:${contact.email}`} className="hover:text-deco">
               Email
             </a>
-            <a href={`tel:${contact.phone.replace(/[\s/]/g, "")}`} className="hover:text-deco">
+            <a href={`tel:${contact.phones[0]?.replace(/\s/g, "")}`} className="hover:text-deco">
               Phone
             </a>
           </nav>
