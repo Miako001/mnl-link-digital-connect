@@ -327,7 +327,7 @@ function Footer() {
             <a href={`mailto:${contact.email}`} className="hover:text-deco">
               Email
             </a>
-            <a href={`tel:${contact.phones[0].replace(/\s/g, "")}`} className="hover:text-deco">
+            <a href={`tel:${contact.phones[0]?.replace(/\s/g, "")}`} className="hover:text-deco">
               Phone
             </a>
           </nav>
