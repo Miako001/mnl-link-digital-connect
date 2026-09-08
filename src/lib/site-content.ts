@@ -12,7 +12,7 @@ export const brand = {
 
 export const contact = {
   email: "hello@mllink.co.ke",
-  phone: "+254 700 123 456",
+  phone: "0746 558266 /0712003941 ",
   instagram: "@mllink_ke",
   instagramUrl: "https://instagram.com/mllink_ke",
   location: "Nairobi, Kenya",
