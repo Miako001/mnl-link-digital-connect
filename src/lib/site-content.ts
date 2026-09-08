@@ -12,7 +12,7 @@ export const brand = {
 
 export const contact = {
   email: "mlsolutions.ke@gmail.com",
-  phone: "0712003941/0746 558266",
+  phone: "0712003941\n\n0746 558266",
   location: "Nairobi, Kenya",
 };
 
