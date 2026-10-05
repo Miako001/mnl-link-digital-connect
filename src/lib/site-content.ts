@@ -48,7 +48,7 @@ export const services = [
   {
     num: "03",
     title: "Digital Marketing & Creative",
-    body: "Strategic digital marketing and creative content to boost your online presence. In Tiktok and Instagram",
+    body: "Strategic digital marketing and creative content on TikTok and Instagram to boost your online presence.",
   },
   {
     num: "04",
