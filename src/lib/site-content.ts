@@ -61,11 +61,6 @@ export const services = [
     body: "Automate repetitive tasks — order confirmations, appointment reminders, invoice generation, follow-up messages — so things run without you lifting a finger.",
   },
   {
-    num: "\n",
-    title: "\n",
-    body: "\n",
-  },
-  {
     num: "06",
     title: "Website Care & Updates",
     body: "Ongoing website updates, content changes, maintenance and support.",
