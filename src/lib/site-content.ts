@@ -48,22 +48,22 @@ export const services = [
   {
     num: "03",
     title: "Digital Marketing & Creative",
-    body: "Strategic digital marketing and creative content to boost your online presence.",
+    body: "Strategic digital marketing and creative content to boost your online presence. In Tiktok and Instagram",
   },
   {
     num: "04",
-    title: "Digital Business Cards",
-    body: "A simple way to share contact information, social links and business details through one digital profile.",
+    title: "Custom Systems Development",
+    body: "Inventory tracking, booking/reservation systems, WhatsApp ordering, loyalty programs — custom tools built around how your business actually runs.",
   },
   {
     num: "05",
-    title: "Digital Presence Consulting",
-    body: "Practical guidance on improving how your business appears and connects with customers online.",
+    title: "Business Automation",
+    body: "Automate repetitive tasks — order confirmations, appointment reminders, invoice generation, follow-up messages — so things run without you lifting a finger.",
   },
   {
-    num: "06",
-    title: "Google Business Profile Setup",
-    body: "Help customers find your business, location, opening hours and contact information on Google.",
+    num: "\n",
+    title: "\n",
+    body: "\n",
   },
   {
     num: "07",
