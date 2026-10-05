@@ -66,7 +66,7 @@ export const services = [
     body: "\n",
   },
   {
-    num: "07",
+    num: "06",
     title: "Website Care & Updates",
     body: "Ongoing website updates, content changes, maintenance and support.",
   },
