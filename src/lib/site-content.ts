@@ -1,4 +1,4 @@
-// Edit this file to update copy, contact details, projects and founders.
+// Edit this file to update copy, contact details, demos and founders.
 import logo from "@/assets/logo.png.asset.json";
 import michelle from "@/assets/michelle.jpg.asset.json";
 import lyeon from "@/assets/lyeon.jpg.asset.json";
@@ -67,25 +67,13 @@ export const services = [
   },
 ];
 
-// Swap `image` with a real screenshot URL (or an imported asset) when available.
-export const projects = [
+// Add more demos here and they appear automatically in the "Our work" section.
+export const demos = [
   {
-    title: "Caribbean Flavours",
-    meta: "Restaurant · Website & Digital Menu",
-    body: "Designed a digital experience for a growing restaurant, including website structure and a QR-based digital menu concept.",
-    image: "",
-  },
-  {
-    title: "M-Pesa Tracker",
-    meta: "UI/UX · Financial Technology",
-    body: "A user-focused interface concept for tracking and presenting M-Pesa transactions clearly.",
-    image: "",
-  },
-  {
-    title: "Public Transport Web Application",
-    meta: "Web Development · Business IT",
-    body: "A web application concept focused on ride scheduling and improving convenience for commuters.",
-    image: "",
+    title: "Savóra",
+    meta: "Restaurant · Demo website",
+    body: "A sample restaurant website with a menu and table reservations, built to show what we can create for your business.",
+    url: "https://savora-demo.netlify.app/",
   },
 ];
 
