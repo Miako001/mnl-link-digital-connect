@@ -3,7 +3,7 @@ import { ArrowRight, Mail, MapPin, Phone, ScanLine } from "lucide-react";
 import { SiteNav } from "@/components/site/SiteNav";
 import { QrMotif } from "@/components/site/QrMotif";
 import { Reveal } from "@/components/site/Reveal";
-import { brand, contact, founders, services, values, why } from "@/lib/site-content";
+import { brand, contact, demos, founders, services, values, why } from "@/lib/site-content";
 
 const title = "M&L Link | Digital Solutions for Growing Businesses";
 const description =
@@ -47,6 +47,7 @@ function Index() {
         <Hero />
         <Intro />
         <Services />
+        <Work />
         <Founders />
         <Why />
         <Contact />
@@ -85,8 +86,8 @@ function Hero() {
             className="mt-6 max-w-xl animate-fade-in text-base leading-relaxed text-background/70 sm:text-lg"
             style={{ animationDelay: "260ms", animationFillMode: "backwards" }}
           >
-            We create simple digital solutions that help small businesses get discovered, connect
-            with customers, and grow.
+            We create simple digital solutions that help small businesses get discovered, connect with customers, and
+            grow.
           </p>
           <div
             className="mt-10 flex animate-fade-in flex-col gap-3 sm:flex-row"
@@ -129,6 +130,7 @@ function Hero() {
 function SectionHead({ eyebrow, heading, sub }: { eyebrow?: string; heading: string; sub?: string }) {
   return (
     <Reveal className="max-w-2xl">
+      <span className="mb-5 block h-1 w-12 bg-deco" aria-hidden="true" />
       {eyebrow && <p className="eyebrow text-muted-foreground">{eyebrow}</p>}
       <h2 className="mt-4 font-display text-3xl font-bold leading-tight text-navy sm:text-4xl lg:text-5xl">
         {heading}
@@ -179,10 +181,7 @@ function Services() {
             <Reveal delay={i * 100}>
               <div className="group grid gap-3 border-b border-hairline py-8 md:grid-cols-[4rem_1fr_1.1fr] md:items-baseline md:gap-8">
                 <div className="flex items-center gap-3">
-                  <span
-                    className={`h-2 w-2 shrink-0 ${i % 2 === 0 ? "bg-navy" : "bg-deco"}`}
-                    aria-hidden="true"
-                  />
+                  <span className={`h-2 w-2 shrink-0 ${i % 2 === 0 ? "bg-navy" : "bg-deco"}`} aria-hidden="true" />
                   <span className="font-display text-sm text-muted-foreground">{s.num}</span>
                 </div>
                 <h3 className="font-display text-xl font-bold text-navy sm:text-2xl">{s.title}</h3>
@@ -196,6 +195,40 @@ function Services() {
   );
 }
 
+function Work() {
+  return (
+    <section id="work" className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">
+      <SectionHead
+        eyebrow="Our work"
+        heading="See what we can build."
+        sub="Sample projects you can open and explore."
+      />
+      <ul className="mt-16 border-t border-hairline">
+        {demos.map((d) => (
+          <li key={d.title}>
+            <Reveal>
+              <div className="grid gap-3 border-b border-hairline py-8 md:grid-cols-[1fr_1.1fr_auto] md:items-center md:gap-8">
+                <div>
+                  <h3 className="font-display text-xl font-bold text-navy sm:text-2xl">{d.title}</h3>
+                  <p className="mt-1 eyebrow text-muted-foreground">{d.meta}</p>
+                </div>
+                <p className="text-base leading-relaxed text-muted-foreground">{d.body}</p>
+                <a
+                  href={d.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full bg-deco px-6 py-3 text-sm font-medium text-navy transition-colors hover:bg-navy hover:text-background"
+                >
+                  View demo <ArrowRight className="h-4 w-4" />
+                </a>
+              </div>
+            </Reveal>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
 
 function Founders() {
   return (
@@ -219,9 +252,7 @@ function Founders() {
                 />
                 <h3 className="mt-6 font-display text-2xl font-bold text-navy">{f.name}</h3>
                 <p className="mt-1 eyebrow text-muted-foreground">{f.role}</p>
-                <p className="mt-4 max-w-md text-base leading-relaxed text-muted-foreground">
-                  {f.bio}
-                </p>
+                <p className="mt-4 max-w-md text-base leading-relaxed text-muted-foreground">{f.bio}</p>
               </div>
             </Reveal>
           ))}
@@ -291,15 +322,7 @@ function Contact() {
   );
 }
 
-function ContactItem({
-  icon,
-  label,
-  children,
-}: {
-  icon: React.ReactNode;
-  label: string;
-  children: React.ReactNode;
-}) {
+function ContactItem({ icon, label, children }: { icon: React.ReactNode; label: string; children: React.ReactNode }) {
   return (
     <div>
       <dt className="flex items-center gap-2 eyebrow text-deco">
@@ -317,7 +340,11 @@ function Footer() {
       <div className="mx-auto max-w-6xl border-t border-background/15 px-5 py-12 md:px-8">
         <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
           <div className="flex min-w-0 items-start gap-3">
-            <img src={brand.logoUrl} alt="" className="h-9 w-9 shrink-0 rounded-md bg-background object-contain p-0.5" />
+            <img
+              src={brand.logoUrl}
+              alt=""
+              className="h-9 w-9 shrink-0 rounded-md bg-background object-contain p-0.5"
+            />
             <div className="min-w-0">
               <p className="font-display text-lg font-bold text-background">{brand.name}</p>
               <p className="mt-1 text-sm">{brand.supporting}</p>
@@ -332,9 +359,7 @@ function Footer() {
             </a>
           </nav>
         </div>
-        <p className="mt-10 text-xs text-background/50">
-          © 2026 {brand.name}. All rights reserved.
-        </p>
+        <p className="mt-10 text-xs text-background/50">© 2026 {brand.name}. All rights reserved.</p>
       </div>
     </footer>
   );
