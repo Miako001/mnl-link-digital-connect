@@ -127,12 +127,26 @@ function Hero() {
   );
 }
 
-function SectionHead({ eyebrow, heading, sub }: { eyebrow?: string; heading: string; sub?: string }) {
+function SectionHead({
+  eyebrow,
+  heading,
+  sub,
+  accent = false,
+}: {
+  eyebrow?: string;
+  heading: string;
+  sub?: string;
+  accent?: boolean;
+}) {
   return (
     <Reveal className="max-w-2xl">
       <span className="mb-5 block h-1 w-12 bg-deco" aria-hidden="true" />
       {eyebrow && <p className="eyebrow text-muted-foreground">{eyebrow}</p>}
-      <h2 className="mt-4 font-display text-3xl font-bold leading-tight text-navy sm:text-4xl lg:text-5xl">
+      <h2
+        className={`mt-4 font-display text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl ${
+          accent ? "text-deco" : "text-navy"
+        }`}
+      >
         {heading}
       </h2>
       {sub && <p className="mt-5 text-base leading-relaxed text-muted-foreground">{sub}</p>}
@@ -240,7 +254,7 @@ function Founders() {
         className="pointer-events-none absolute -left-24 top-24 h-[28rem] w-[28rem] rounded-full border border-hairline"
       />
       <div className="relative mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">
-        <SectionHead eyebrow="About" heading="Meet the people behind M&L Link." />
+        <SectionHead accent eyebrow="About" heading="Meet the people behind M&L Link." />
         <div className="mt-16 grid gap-14 md:grid-cols-2 md:gap-16">
           {founders.map((f, i) => (
             <Reveal key={f.name} delay={i * 150}>
