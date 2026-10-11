@@ -172,6 +172,7 @@ function Services() {
     <section id="services" className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">
       <SectionHead
         eyebrow="Services"
+        accent
         heading="What we can connect."
         sub="Digital solutions designed for small and growing businesses."
       />
@@ -200,6 +201,7 @@ function Work() {
     <section id="work" className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">
       <SectionHead
         eyebrow="Our work"
+        accent
         heading="See what we can build."
         sub="Sample projects you can open and explore."
       />
