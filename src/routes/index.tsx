@@ -144,7 +144,7 @@ function SectionHead({
       {eyebrow && <p className="eyebrow text-muted-foreground">{eyebrow}</p>}
       <h2
         className={`mt-4 font-display text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl ${
-          accent ? "text-deco" : "text-navy"
+          accent ? "text-deco-deep" : "text-navy"
         }`}
       >
         {heading}
