@@ -4,7 +4,7 @@ import michelle from "@/assets/michelle.jpg.asset.json";
 import lyeon from "@/assets/lyeon.jpg.asset.json";
 
 export const brand = {
-  name: "M&L Link",
+  name: "M&L Digital Solutions",
   tagline: "Connect your business to the digital world.",
   supporting: "Simple digital solutions for growing businesses.",
   logoUrl: logo.url,
@@ -81,13 +81,13 @@ export const founders = [
   {
     name: "Michelle Miako",
     role: "Co-Founder · Digital Solutions",
-    bio: "Business Information Technology student and web developer focused on creating practical digital experiences and technology solutions for businesses.",
+    bio: "Michelle builds practical digital experiences, from websites and mobile applications to custom systems that simplify business operations and help businesses serve their customers better.",
     photo: michelle.url,
   },
   {
     name: "Lyeon Kamau",
     role: "Co-Founder · Digital Solutions",
-    bio: "Driven by a passion for accessible technology, Lyeon builds digital tools that empower small businesses.",
+    bio: "Lyeon builds digital solutions with a focus on functionality, usability and security. With experience in penetration testing, he brings a security-conscious perspective to developing technology that businesses can rely on.",
     photo: lyeon.url,
   },
 ];
