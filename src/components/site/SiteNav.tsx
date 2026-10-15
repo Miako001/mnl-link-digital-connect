@@ -31,7 +31,7 @@ export function SiteNav() {
         className="mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-4 md:px-8"
       >
         <a href="#top" className="flex min-w-0 items-center gap-2.5">
-          <img src={brand.logoUrl} alt="M&L Link logo" className="h-9 w-9 shrink-0 object-contain" />
+          <img src={brand.logoUrl} alt="M&L Digital Solutions logo" className="h-9 w-9 shrink-0 object-contain" />
           <span className="truncate font-display text-lg font-bold text-navy">{brand.name}</span>
         </a>
 

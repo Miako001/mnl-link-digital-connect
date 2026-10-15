@@ -5,9 +5,9 @@ import { QrMotif } from "@/components/site/QrMotif";
 import { Reveal } from "@/components/site/Reveal";
 import { brand, contact, demos, founders, services, values, why } from "@/lib/site-content";
 
-const title = "M&L Link | Digital Solutions for Growing Businesses";
+const title = "M&L Digital Solutions | Digital Solutions for Growing Businesses";
 const description =
-  "M&L Link creates practical digital solutions including QR-code experiences, websites and digital tools for small and growing businesses in Nairobi, Kenya.";
+  "M&L Digital Solutions creates practical digital solutions including QR-code experiences, websites and digital tools for small and growing businesses in Nairobi, Kenya.";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -28,7 +28,7 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "ProfessionalService",
-          name: "M&L Link",
+          name: "M&L Digital Solutions",
           description,
           address: { "@type": "PostalAddress", addressLocality: "Nairobi", addressCountry: "KE" },
           email: contact.email,
@@ -67,7 +67,7 @@ function Hero() {
         <div className="max-w-3xl">
           <img
             src={brand.logoUrl}
-            alt="M&L Link logo"
+            alt="M&L Digital Solutions logo"
             className="mb-10 h-14 w-14 animate-fade-in rounded-md bg-background object-contain p-1"
           />
           <p
@@ -254,7 +254,7 @@ function Founders() {
         className="pointer-events-none absolute -left-24 top-24 h-[28rem] w-[28rem] rounded-full border border-hairline"
       />
       <div className="relative mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">
-        <SectionHead accent eyebrow="About" heading="Meet the people behind M&L Link." />
+        <SectionHead accent eyebrow="About" heading="Meet the people behind M&L Digital Solutions." />
         <div className="mt-16 grid gap-14 md:grid-cols-2 md:gap-16">
           {founders.map((f, i) => (
             <Reveal key={f.name} delay={i * 150}>
